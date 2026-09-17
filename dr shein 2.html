@@ -1,0 +1,1452 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>DR SHEIN SEC. SCHOOL | Excellence in Education</title>
+
+    <meta name="description"
+    content="DR SHEIN SEC. SCHOOL - Inspiring students, building character and preparing tomorrow's leaders.">
+
+    <style>
+	   /* =========================
+    GENERAL
+      ========================== */
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+           line-height: 1.6;
+            color: #14d814;
+            background: #000000;
+        }
+
+        :root {
+            --primary: #063970;
+            --secondary: #0b8f55;
+           --gold: #f4b400;
+            --light: #f4f8fc;
+            --dark: #071b2e;
+            --white: #ffffff;
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+        }
+
+        img {
+            width: 100%;
+            display: block;
+        }
+
+        .container {
+           width: 90%;
+            max-width: 1200px;
+            margin: auto;
+       }
+
+        .section {
+            padding: 80px 0;
+        }
+
+        .section-title {
+            text-align: center;
+            margin-bottom: 50px;
+        }
+
+        .section-title h2 {
+            color: var(--primary);
+            font-size: 2.4rem;
+            margin-bottom: 10px;
+        }
+
+        .section-title p {
+            color: #666;
+            max-width: 650px;
+            margin: auto;
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 13px 25px;
+            border-radius: 30px;
+            font-weight: bold;
+            transition: 0.3s;
+            cursor: pointer;
+            border: none;
+        }
+
+        .btn-primary {
+            background: var(--gold);
+            color: #111;
+        }
+
+        .btn-primary:hover {
+            transform: translateY(-3px);
+            background: #ffc928;
+            box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+        }
+
+        .btn-outline {
+            border: 2px solid white;
+            color: white;
+            margin-left: 10px;
+        }
+
+        .btn-outline:hover {
+            background: white;
+            color: var(--primary);
+        }
+
+
+        /* =========================
+           TOP BAR
+        ========================== */
+
+        .topbar {
+            background: var(--dark);
+            color: white;
+            padding: 9px 0;
+            font-size: 14px;
+        }
+
+        .topbar-content {
+            display: flex;
+            justify-content: space-between;
+            gap: 20px;
+        }
+
+
+        /* =========================
+           NAVIGATION
+        ========================== */
+
+        header {
+            background: white;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 2px 12px rgba(0,0,0,0.08);
+        }
+
+        nav {
+            height: 75px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            font-weight: bold;
+            color: var(--primary);
+            font-size: 18px;
+        }
+
+        .logo-icon {
+            width: 48px;
+            height: 48px;
+            border-radius: 50%;
+            background: var(--primary);
+            color: var(--gold);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: bold;
+            border: 3px solid var(--gold);
+        }
+
+        .nav-links {
+            display: flex;
+            list-style: none;
+            gap: 25px;
+        }
+
+        .nav-links a {
+            color: #333;
+            font-weight: 600;
+            transition: 0.3s;
+        }
+
+        .nav-links a:hover {
+            color: var(--secondary);
+        }
+
+        .menu-btn {
+            display: none;
+            font-size: 28px;
+            cursor: pointer;
+        }
+
+
+        /* =========================
+           HERO
+        ========================== */
+
+        .hero {
+            min-height: 650px;
+            background:
+                
+                url("drshein3.jpg")
+                center/cover;
+
+            display: flex;
+            align-items: center;
+            color: rgb(38, 247, 10);
+        }
+
+        .hero-content {
+            max-width: 750px;
+        }
+
+        .hero small {
+            color: var(--gold);
+            font-size: 17px;
+            font-weight: bold;
+            letter-spacing: 2px;
+        }
+
+        .hero h1 {
+            font-size: clamp(2.5rem, 6vw, 5rem);
+            line-height: 1.05;
+            margin: 18px 0;
+        }
+
+        .hero h1 span {
+            color: var(--gold);
+        }
+
+        .hero p {
+            font-size: 1.15rem;
+            max-width: 650px;
+            margin-bottom: 30px;
+            color: #e9eef4;
+        }
+
+
+        /* =========================
+           STATS
+        ========================== */
+
+        .stats {
+            margin-top: -55px;
+            position: relative;
+            z-index: 5;
+        }
+
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            background: white;
+            border-radius: 15px;
+            box-shadow: 0 10px 35px rgba(0,0,0,0.12);
+            overflow: hidden;
+        }
+
+        .stat {
+            text-align: center;
+            padding: 30px 15px;
+            border-right: 1px solid #eee;
+        }
+
+        .stat:last-child {
+            border-right: none;
+        }
+
+        .stat h3 {
+            color: var(--primary);
+            font-size: 2rem;
+        }
+
+        .stat p {
+            color: #666;
+        }
+
+
+        /* =========================
+           ABOUT
+        ========================== */
+
+        .about-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 50px;
+            align-items: center;
+        }
+
+        .about-image {
+            border-radius: 20px;
+            overflow: hidden;
+            box-shadow: 0 15px 35px rgba(0,0,0,0.15);
+        }
+
+        .about-image img {
+            height: 450px;
+            object-fit: cover;
+        }
+
+        .about-text h2 {
+            color: var(--primary);
+            font-size: 2.3rem;
+            margin-bottom: 20px;
+        }
+
+        .about-text p {
+            color: #555;
+            margin-bottom: 15px;
+        }
+
+        .check-list {
+            list-style: none;
+            margin: 20px 0;
+        }
+
+        .check-list li {
+            margin: 10px 0;
+        }
+
+        .check-list li::before {
+            content: "✓";
+            color: var(--secondary);
+            font-weight: bold;
+            margin-right: 10px;
+        }
+
+
+        /* =========================
+           ACADEMICS
+        ========================== */
+
+        .academics {
+            background: var(--light);
+        }
+
+        .cards {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 25px;
+        }
+
+        .card {
+            background: white;
+            padding: 35px 25px;
+            border-radius: 15px;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.07);
+            transition: 0.3s;
+        }
+
+        .card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 15px 30px rgba(0,0,0,0.12);
+        }
+
+        .card-icon {
+            width: 65px;
+            height: 65px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: #e8f3ff;
+            border-radius: 50%;
+            font-size: 30px;
+            margin-bottom: 20px;
+        }
+
+        .card h3 {
+            color: var(--primary);
+            margin-bottom: 10px;
+        }
+
+        .card p {
+            color: #666;
+        }
+
+
+        /* =========================
+           WHY US
+        ========================== */
+
+        .why-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 25px;
+        }
+
+        .why-item {
+            display: flex;
+            gap: 20px;
+            padding: 25px;
+            background: white;
+            border-radius: 15px;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.06);
+        }
+
+        .why-number {
+            min-width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            background: var(--primary);
+            color: var(--gold);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: bold;
+        }
+
+        .why-item h3 {
+            color: var(--primary);
+            margin-bottom: 5px;
+        }
+
+        .why-item p {
+            color: #666;
+        }
+
+
+        /* =========================
+           STUDENT LIFE
+        ========================== */
+
+        .student-life {
+            background: var(--primary);
+            color: white;
+        }
+
+        .student-life .section-title h2 {
+            color: white;
+        }
+
+        .student-life .section-title p {
+            color: #d5e3ef;
+        }
+
+        .life-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 20px;
+        }
+
+        .life-card {
+            position: relative;
+            height: 270px;
+            overflow: hidden;
+            border-radius: 15px;
+        }
+
+        .life-card img {
+            height: 100%;
+            object-fit: cover;
+            transition: 0.5s;
+        }
+
+        .life-card:hover img {
+            transform: scale(1.1);
+        }
+
+        .life-caption {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            padding: 25px 15px 15px;
+            background: linear-gradient(transparent, rgba(0,0,0,0.85));
+        }
+
+        .life-caption h3 {
+            color: white;
+        }
+
+
+        /* =========================
+           ACHIEVEMENTS
+        ========================== */
+
+        .achievement-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 25px;
+        }
+
+        .achievement {
+            text-align: center;
+            padding: 35px 20px;
+            border-radius: 15px;
+            background: linear-gradient(135deg, #063970, #0b8f55);
+            color: white;
+        }
+
+        .achievement .number {
+            color: var(--gold);
+            font-size: 3rem;
+            font-weight: bold;
+        }
+
+
+        /* =========================
+           GALLERY
+        ========================== */
+
+        .gallery {
+            background: var(--light);
+        }
+
+        .gallery-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 12px;
+        }
+
+        .gallery-item {
+            height: 230px;
+            overflow: hidden;
+            border-radius: 10px;
+            cursor: pointer;
+        }
+
+        .gallery-item img {
+            height: 100%;
+            object-fit: cover;
+            transition: 0.4s;
+        }
+
+        .gallery-item:hover img {
+            transform: scale(1.08);
+        }
+
+
+        /* =========================
+           ADMISSION CTA
+        ========================== */
+
+        .admission-cta {
+            background:
+                linear-gradient(rgba(6,57,112,0.9), rgba(6,57,112,0.9)),
+                url("https://images.unsplash.com/photo-1523050854058-8df90110c9f1?auto=format&fit=crop&w=1800&q=80")
+                center/cover;
+            color: white;
+            text-align: center;
+        }
+
+        .admission-cta h2 {
+            font-size: 2.7rem;
+            margin-bottom: 15px;
+        }
+
+        .admission-cta p {
+            max-width: 700px;
+            margin: 0 auto 25px;
+        }
+
+
+        /* =========================
+           ADMISSION FORM
+        ========================== */
+
+        .form-section {
+            background: white;
+        }
+
+        .form-container {
+            max-width: 800px;
+            margin: auto;
+            background: #f8fafc;
+            padding: 40px;
+            border-radius: 20px;
+            box-shadow: 0 8px 30px rgba(0,0,0,0.08);
+        }
+
+        .form-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 20px;
+        }
+
+        .form-group {
+            margin-bottom: 18px;
+        }
+
+        .form-group.full {
+            grid-column: 1 / -1;
+        }
+
+        label {
+            display: block;
+            font-weight: bold;
+            margin-bottom: 7px;
+            color: #333;
+        }
+
+        input,
+        select,
+        textarea {
+            width: 100%;
+            padding: 13px;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            font-size: 15px;
+            outline: none;
+        }
+
+        input:focus,
+        select:focus,
+        textarea:focus {
+            border-color: var(--secondary);
+        }
+
+        textarea {
+            min-height: 120px;
+            resize: vertical;
+        }
+
+        .form-submit {
+            width: 100%;
+            font-size: 16px;
+        }
+
+
+        /* =========================
+           CONTACT
+        ========================== */
+
+        .contact {
+            background: var(--dark);
+            color: white;
+        }
+
+        .contact-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 50px;
+        }
+
+        .contact h2 {
+            color: var(--gold);
+            margin-bottom: 20px;
+        }
+
+        .contact-info p {
+            margin: 15px 0;
+            color: #d8e1e8;
+        }
+
+        .map {
+            min-height: 300px;
+            background: #123452;
+            border-radius: 15px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            color: #b9c9d7;
+        }
+
+
+        /* =========================
+           FOOTER
+        ========================== */
+
+        footer {
+            background: #031321;
+            color: #aebdca;
+            text-align: center;
+            padding: 25px 0;
+        }
+
+        footer strong {
+            color: white;
+        }
+
+
+        /* =========================
+           WHATSAPP BUTTON
+        ========================== */
+
+        .whatsapp {
+            position: fixed;
+            right: 22px;
+            bottom: 22px;
+            width: 58px;
+            height: 58px;
+            border-radius: 50%;
+            background: #25D366;
+            color: white;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 29px;
+            z-index: 999;
+            box-shadow: 0 6px 20px rgba(0,0,0,0.25);
+            transition: 0.3s;
+        }
+
+        .whatsapp:hover {
+            transform: scale(1.1);
+        }
+
+
+        /* =========================
+           RESPONSIVE
+        ========================== */
+
+        @media (max-width: 900px) {
+
+            .nav-links {
+                position: absolute;
+                top: 75px;
+                left: 0;
+                right: 0;
+                background: white;
+                display: none;
+                flex-direction: column;
+                padding: 25px;
+                box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+            }
+
+            .nav-links.active {
+                display: flex;
+            }
+
+            .menu-btn {
+                display: block;
+            }
+
+            .stats-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .cards {
+                grid-template-columns: 1fr 1fr;
+            }
+
+            .life-grid {
+                grid-template-columns: 1fr 1fr;
+            }
+
+            .gallery-grid {
+                grid-template-columns: 1fr 1fr;
+            }
+        }
+
+
+        @media (max-width: 700px) {
+
+            .topbar-content {
+                flex-direction: column;
+                text-align: center;
+                gap: 4px;
+            }
+
+            .hero {
+                min-height: 600px;
+            }
+
+            .hero h1 {
+                font-size: 2.7rem;
+            }
+
+            .btn-outline {
+                margin-left: 0;
+                margin-top: 10px;
+            }
+
+            .about-grid,
+            .contact-grid,
+            .why-grid,
+            .cards,
+            .achievement-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .life-grid,
+            .gallery-grid {
+                grid-template-columns: 1fr 1fr;
+            }
+
+            .form-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .form-group.full {
+                grid-column: auto;
+            }
+
+            .section {
+                padding: 60px 0;
+            }
+
+            .section-title h2 {
+                font-size: 2rem;
+            }
+
+            .about-image img {
+                height: 330px;
+            }
+        }
+
+
+        @media (max-width: 450px) {
+
+            .life-grid,
+            .gallery-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .stats-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .stat {
+                border-right: none;
+                border-bottom: 1px solid #eee;
+            }
+
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- ================= TOP BAR ================= -->
+
+    <div class="topbar">
+        <div class="container topbar-content">
+            <span>📚 Inspiring Minds • Building Futures</span>
+            <span>📞 Call us for admission information</span>
+        </div>
+    </div>
+
+
+    <!-- ================= NAVIGATION ================= -->
+
+    <header>
+        <nav class="container">
+
+            <a href="#home" class="logo">
+                <div class=""><img src ="dr shein.png" height="45" width="50"></img></div>
+
+                <div>
+                    DR SHEIN<br>
+                    <small>SECONDARY SCHOOL</small>
+                </div>
+            </a>
+
+            <div class="menu-btn" onclick="toggleMenu()">☰</div>
+
+            <ul class="nav-links" id="navLinks">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#academics">Academics</a></li>
+                <li><a href="#life">Student Life</a></li>
+                <li><a href="#gallery">Gallery</a></li>
+               
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+
+        </nav>
+    </header>
+
+
+    <!-- ================= HERO ================= -->
+
+    <section class="hero" id="home">
+
+        <div class="container hero-content">
+
+           <center> <font size ="20"><font color ="manganes"> WELCOME TO DR SHEIN SECONDARY SCHOOL</font></font></center>
+			
+
+            <h2>
+                Discover Your
+                <span>Potential.</span>
+                Shape Your Future.
+            </h2>
+
+            <p>
+                A place where knowledge meets character, dreams become goals,
+                and every student is encouraged to become the best version of themselves.
+            </p>
+
+          
+
+            <a href="#about" class="btn btn-outline">
+                Discover Our School
+            </a>
+
+        </div>
+
+    </section>
+
+
+    <!-- ================= STATS ================= -->
+
+    <section class="stats">
+
+        <div class="container stats-grid">
+
+            <div class="stat">
+                <h3>621+</h3>
+                <p>Students</p>
+            </div>
+
+            <div class="stat">
+                <h3>22+</h3>
+                <p>Teachers & Staff</p>
+            </div>
+
+            <div class="stat">
+                <h3>6+</h3>
+                <p>Years of Excellence</p>
+            </div>
+
+            <div class="stat">
+                <h3>95%</h3>
+                <p>Student Success</p>
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- ================= ABOUT ================= -->
+
+    <section class="section" id="about">
+
+        <div class="container about-grid">
+
+            <div class="about-image">
+                <img
+                    src="IMG-SCHOOL.JPG"
+                    >
+            </div>
+
+            <div class="about-text">
+
+                <h2>More Than a School — A Community.</h2>
+
+                <p>
+                    At <strong>DR SHEIN SECONDARY SCHOOL</strong>, we believe that
+                    education is not only about passing examinations.
+                    It is about developing confident, responsible and
+                    creative young people.
+                </p>
+
+                <p>
+                    Our school provides students with opportunities to
+                    explore their talents, develop leadership skills and
+                    prepare for a successful future.
+                </p>
+
+                <ul class="check-list">
+                    <li>Qualified and dedicated teachers</li>
+                    <li>Supportive learning environment</li>
+                    <li>Academic and extracurricular development</li>
+                    <li>Strong focus on discipline and character</li>
+                    <li>Modern learning approaches</li>
+                </ul>
+
+               
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- ================= ACADEMICS ================= -->
+
+    <section class="section academics" id="academics">
+
+        <div class="container">
+
+            <div class="section-title">
+                <h2>Academic Excellence</h2>
+
+                <p>
+                    We help students build a strong foundation for
+                    higher education and their future careers.
+                </p>
+            </div>
+
+            <div class="cards">
+
+                <div class="card">
+                    <div class="card-icon">🔬</div>
+                    <h3>Science & Technology</h3>
+                    <p>
+                        Encourage curiosity, experimentation,
+                        scientific thinking and technological skills.
+                    </p>
+                </div>
+
+                <div class="card">
+                    <div class="card-icon">📖</div>
+                    <h3>Languages & Humanities</h3>
+                    <p>
+                        Develop communication, critical thinking,
+                        creativity and understanding of society.
+                    </p>
+                </div>
+
+                <div class="card">
+                    <div class="card-icon">📐</div>
+                    <h3>Mathematics</h3>
+                    <p>
+                        Build logical thinking, problem-solving
+                        abilities and strong numerical foundations.
+                    </p>
+                </div>
+
+                <div class="card">
+                    <div class="card-icon">💻</div>
+                    <h3>ICT & Digital Skills</h3>
+                    <p>
+                        Prepare students for a digital world through
+                        computer and technology education.
+                    </p>
+                </div>
+
+                <div class="card">
+                    <div class="card-icon">🎨</div>
+                    <h3>Creative Arts</h3>
+                    <p>
+                        Give students opportunities to express
+                        creativity through arts and culture.
+                    </p>
+                </div>
+
+                <div class="card">
+                    <div class="card-icon">⚽</div>
+                    <h3>Sports & Fitness</h3>
+                    <p>
+                        Promote teamwork, discipline, confidence
+                        and healthy lifestyles.
+                    </p>
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- ================= WHY CHOOSE US ================= -->
+
+    <section class="section">
+
+        <div class="container">
+
+            <div class="section-title">
+                <h2>Why Choose DR SHEIN?</h2>
+
+                <p>
+                    We are committed to creating an environment
+                    where every learner can thrive.
+                </p>
+            </div>
+
+            <div class="why-grid">
+
+                <div class="why-item">
+                    <div class="why-number">01</div>
+
+                    <div>
+                        <h3>Quality Education</h3>
+                        <p>
+                            We focus on strong academic foundations
+                            and meaningful learning.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="why-item">
+                    <div class="why-number">02</div>
+
+                    <div>
+                        <h3>Experienced Teachers</h3>
+                        <p>
+                            Our educators guide, support and motivate
+                            students throughout their education.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="why-item">
+                    <div class="why-number">03</div>
+
+                    <div>
+                        <h3>Character Development</h3>
+                        <p>
+                            We develop responsibility, respect,
+                            leadership and discipline.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="why-item">
+                    <div class="why-number">04</div>
+
+                    <div>
+                        <h3>Student Support</h3>
+                        <p>
+                            Students receive guidance that helps
+                            them grow academically and personally.
+                        </p>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- ================= STUDENT LIFE ================= -->
+
+    <section class="section student-life" id="life">
+
+        <div class="container">
+
+            <div class="section-title">
+                <h2>Life Beyond the Classroom</h2>
+
+                <p>
+                    Learning becomes even more powerful when students
+                    participate, collaborate and discover their talents.
+                </p>
+            </div>
+
+            <div class="life-grid">
+
+                <div class="life-card">
+                    <img
+                        src="https://images.unsplash.com/photo-1526232761682-d26e03ac148e?auto=format&fit=crop&w=800&q=80"
+                        alt="Sports">
+                    <div class="life-caption">
+                        <h3>Sports</h3>
+                        <p>Teamwork & discipline</p>
+                    </div>
+                </div>
+
+                <div class="life-card">
+                    <img
+                        src="https://images.unsplash.com/photo-1529390079861-591de354faf5?auto=format&fit=crop&w=800&q=80"
+                        alt="Students">
+                    <div class="life-caption">
+                        <h3>Student Clubs</h3>
+                        <p>Discover your interests</p>
+                    </div>
+                </div>
+
+                <div class="life-card">
+                    <img
+                        src="https://images.unsplash.com/photo-1492684223066-81342ee5ff30?auto=format&fit=crop&w=800&q=80"
+                        alt="Events">
+                    <div class="life-caption">
+                        <h3>School Events</h3>
+                        <p>Memories that last</p>
+                    </div>
+                </div>
+
+                <div class="life-card">
+                    <img
+                        src="https://images.unsplash.com/photo-1511632765486-a01980e01a18?auto=format&fit=crop&w=800&q=80"
+                        alt="Teamwork">
+                    <div class="life-caption">
+                        <h3>Leadership</h3>
+                        <p>Building tomorrow's leaders</p>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- ================= ACHIEVEMENTS ================= -->
+
+    <section class="section">
+
+        <div class="container">
+
+            <div class="section-title">
+
+                <h2>Our Achievements</h2>
+
+                <p>
+                    Celebrating the dedication of our students,
+                    teachers and entire school community.
+                </p>
+
+            </div>
+
+            <div class="achievement-grid">
+
+                <div class="achievement">
+                    <div class="number">95%</div>
+                    <h3>Academic Success</h3>
+                    <p>Committed to excellent learning outcomes.</p>
+                </div>
+
+                <div class="achievement">
+                    <div class="number">6+</div>
+                    <h3>Years of Service</h3>
+                    <p>Growing generations of learners.</p>
+                </div>
+
+                <div class="achievement">
+                    <div class="number">621+</div>
+                    <h3>Students</h3>
+                    <p>Building a strong school community.</p>
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- ================= GALLERY ================= -->
+
+    <section class="section gallery" id="gallery">
+
+        <div class="container">
+
+            <div class="section-title">
+                <h2>School Gallery</h2>
+
+                <p>
+                    A glimpse of the experiences and activities
+                    that make school life special.
+                </p>
+            </div>
+
+            <div class="gallery-grid">
+
+                <div class="gallery-item">
+                    <img src="students practice.jpg"
+                         alt="Students learning">
+                </div>
+
+                <div class="gallery-item">
+                    <img src ="library.jpg"
+                         alt="Classroom">
+                </div>
+
+                <div class="gallery-item">
+                    <img src=""
+                         alt="Students">
+                </div>
+
+                <div class="gallery-item">
+                    <img src="https://images.unsplash.com/photo-1560785496-3c9d27877182?auto=format&fit=crop&w=800&q=80"
+                         alt="School activity">
+                </div>
+
+                <div class="gallery-item">
+                    <img src="https://images.unsplash.com/photo-1588072432836-e10032774350?auto=format&fit=crop&w=800&q=80"
+                         alt="Teacher">
+                </div>
+
+                <div class="gallery-item">
+                    <img src="https://images.unsplash.com/photo-1509062522246-3755977927d7?auto=format&fit=crop&w=800&q=80"
+                         alt="School">
+                </div>
+
+                <div class="gallery-item">
+                    <img src="https://images.unsplash.com/photo-1546410531-bb4caa6b424d?auto=format&fit=crop&w=800&q=80"
+                         alt="Classroom">
+                </div>
+
+                <div class="gallery-item">
+                    <img src="https://images.unsplash.com/photo-1523050854058-8df90110c9f1?auto=format&fit=crop&w=800&q=80"
+                         alt="Graduation">
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- ================= ADMISSION CTA ================= -->
+
+    <section class="section admission-cta">
+
+        <div class="container">
+
+            <h2>Your Future Starts Here.</h2>
+
+            <p>
+                Give your child an opportunity to learn, grow,
+                discover their talents and prepare for a brighter future.
+            </p>
+
+           
+
+        </div>
+
+    </section>
+
+
+
+
+
+    <!-- ================= CONTACT ================= -->
+
+    <section class="section contact" id="contact">
+
+        <div class="container contact-grid">
+
+            <div class="contact-info">
+
+                <h2>Contact DR SHEIN SEC. SCHOOL</h2>
+
+                <p>
+                    🏠 <strong>Location:</strong><br>
+                   Ziwa Kije, Micheweni Destrict, North Pemba., Zanzibar, Tanzania
+                </p>
+
+                <p>
+                    📞 <strong>Phone:</strong><br>
+                    +255 773889572
+                </p>
+
+                <p>
+                    ✉️ <strong>Email:</strong><br>
+                    dr.sheinsecschool@gmail.com
+                </p>
+
+                <p>
+                    🕐 <strong>Office Hours:</strong><br>
+                    Monday – Friday: 8:00 AM – 4:00 PM
+                </p>
+
+           
+
+            </div>
+
+
+            
+
+               
+
+         
+
+        
+
+    </section>
+
+
+    <!-- ================= FOOTER ================= -->
+
+    <footer>
+
+        <div class="container">
+
+            <p>
+                © <span id="yearNow"></span>
+                <strong>DR SHEIN SEC. SCHOOL</strong>.
+                All Rights Reserved.
+            </p>
+
+            <p style="margin-top:8px;">
+                Excellence • Character • Leadership
+            </p>
+
+        </div>
+
+    </footer>
+
+
+    <!-- ================= WHATSAPP ================= -->
+
+    <!--
+        IMPORTANT:
+        Replace 255XXXXXXXXX with your actual WhatsApp number.
+        Example:
+        https://wa.me/255712345678
+    -->
+
+    <a
+        class="whatsapp"
+        href="https://wa.me/255XXXXXXXXX?text=Hello%20DR%20SHEIN%20SEC.%20SCHOOL,%20I%20would%20like%20to%20ask%20about%20admission."
+        target="_blank"
+        aria-label="Chat with us on WhatsApp">
+        ☎
+    </a>
+
+
+    <!-- ================= JAVASCRIPT ================= -->
+
+    <script>
+
+        // Mobile navigation
+        function toggleMenu() {
+
+            const nav = document.getElementById("navLinks");
+
+            nav.classList.toggle("active");
+
+        }
+
+
+        // Close mobile menu after clicking a link
+        document.querySelectorAll(".nav-links a").forEach(function(link) {
+
+            link.addEventListener("click", function() {
+
+                document
+                    .getElementById("navLinks")
+                    .classList.remove("active");
+
+            });
+
+        });
+
+
+        // Admission form
+        document
+            .getElementById("admissionForm")
+            .addEventListener("submit", function(event) {
+
+                event.preventDefault();
+
+                const studentName =
+                    document.getElementById("studentName").value;
+
+                document.getElementById("formMessage").textContent =
+                    "Thank you, " + studentName +
+                    "! Your admission enquiry has been received.";
+
+                this.reset();
+
+            });
+
+
+        // Current year
+        document.getElementById("yearNow").textContent =
+            new Date().getFullYear();
+
+    </script>
+
+</body>
+</html>
+```
