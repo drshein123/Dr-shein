@@ -1,1452 +1,2097 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-    <title>DR SHEIN SEC. SCHOOL | Excellence in Education</title>
-
-    <meta name="description"
-    content="DR SHEIN SEC. SCHOOL - Inspiring students, building character and preparing tomorrow's leaders.">
-
-    <style>
-	   /* =========================
-    GENERAL
-      ========================== */
-
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-            scroll-behavior: smooth;
-        }
-
-        body {
-            font-family: Arial, Helvetica, sans-serif;
-           line-height: 1.6;
-            color: #14d814;
-            background: #000000;
-        }
-
-        :root {
-            --primary: #063970;
-            --secondary: #0b8f55;
-           --gold: #f4b400;
-            --light: #f4f8fc;
-            --dark: #071b2e;
-            --white: #ffffff;
-        }
-
-        a {
-            text-decoration: none;
-            color: inherit;
-        }
-
-        img {
-            width: 100%;
-            display: block;
-        }
-
-        .container {
-           width: 90%;
-            max-width: 1200px;
-            margin: auto;
-       }
-
-        .section {
-            padding: 80px 0;
-        }
-
-        .section-title {
-            text-align: center;
-            margin-bottom: 50px;
-        }
-
-        .section-title h2 {
-            color: var(--primary);
-            font-size: 2.4rem;
-            margin-bottom: 10px;
-        }
-
-        .section-title p {
-            color: #666;
-            max-width: 650px;
-            margin: auto;
-        }
-
-        .btn {
-            display: inline-block;
-            padding: 13px 25px;
-            border-radius: 30px;
-            font-weight: bold;
-            transition: 0.3s;
-            cursor: pointer;
-            border: none;
-        }
-
-        .btn-primary {
-            background: var(--gold);
-            color: #111;
-        }
-
-        .btn-primary:hover {
-            transform: translateY(-3px);
-            background: #ffc928;
-            box-shadow: 0 8px 20px rgba(0,0,0,0.2);
-        }
-
-        .btn-outline {
-            border: 2px solid white;
-            color: white;
-            margin-left: 10px;
-        }
-
-        .btn-outline:hover {
-            background: white;
-            color: var(--primary);
-        }
-
-
-        /* =========================
-           TOP BAR
-        ========================== */
-
-        .topbar {
-            background: var(--dark);
-            color: white;
-            padding: 9px 0;
-            font-size: 14px;
-        }
-
-        .topbar-content {
-            display: flex;
-            justify-content: space-between;
-            gap: 20px;
-        }
-
-
-        /* =========================
-           NAVIGATION
-        ========================== */
-
-        header {
-            background: white;
-            position: sticky;
-            top: 0;
-            z-index: 1000;
-            box-shadow: 0 2px 12px rgba(0,0,0,0.08);
-        }
-
-        nav {
-            height: 75px;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-        }
-
-        .logo {
-            display: flex;
-            align-items: center;
-            gap: 12px;
-            font-weight: bold;
-            color: var(--primary);
-            font-size: 18px;
-        }
-
-        .logo-icon {
-            width: 48px;
-            height: 48px;
-            border-radius: 50%;
-            background: var(--primary);
-            color: var(--gold);
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-weight: bold;
-            border: 3px solid var(--gold);
-        }
-
-        .nav-links {
-            display: flex;
-            list-style: none;
-            gap: 25px;
-        }
-
-        .nav-links a {
-            color: #333;
-            font-weight: 600;
-            transition: 0.3s;
-        }
-
-        .nav-links a:hover {
-            color: var(--secondary);
-        }
-
-        .menu-btn {
-            display: none;
-            font-size: 28px;
-            cursor: pointer;
-        }
-
-
-        /* =========================
-           HERO
-        ========================== */
-
-        .hero {
-            min-height: 650px;
-            background:
-                
-                url("drshein3.jpg")
-                center/cover;
-
-            display: flex;
-            align-items: center;
-            color: rgb(38, 247, 10);
-        }
-
-        .hero-content {
-            max-width: 750px;
-        }
-
-        .hero small {
-            color: var(--gold);
-            font-size: 17px;
-            font-weight: bold;
-            letter-spacing: 2px;
-        }
-
-        .hero h1 {
-            font-size: clamp(2.5rem, 6vw, 5rem);
-            line-height: 1.05;
-            margin: 18px 0;
-        }
-
-        .hero h1 span {
-            color: var(--gold);
-        }
-
-        .hero p {
-            font-size: 1.15rem;
-            max-width: 650px;
-            margin-bottom: 30px;
-            color: #e9eef4;
-        }
-
-
-        /* =========================
-           STATS
-        ========================== */
-
-        .stats {
-            margin-top: -55px;
-            position: relative;
-            z-index: 5;
-        }
-
-        .stats-grid {
-            display: grid;
-            grid-template-columns: repeat(4, 1fr);
-            background: white;
-            border-radius: 15px;
-            box-shadow: 0 10px 35px rgba(0,0,0,0.12);
-            overflow: hidden;
-        }
-
-        .stat {
-            text-align: center;
-            padding: 30px 15px;
-            border-right: 1px solid #eee;
-        }
-
-        .stat:last-child {
-            border-right: none;
-        }
-
-        .stat h3 {
-            color: var(--primary);
-            font-size: 2rem;
-        }
-
-        .stat p {
-            color: #666;
-        }
-
-
-        /* =========================
-           ABOUT
-        ========================== */
-
-        .about-grid {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 50px;
-            align-items: center;
-        }
-
-        .about-image {
-            border-radius: 20px;
-            overflow: hidden;
-            box-shadow: 0 15px 35px rgba(0,0,0,0.15);
-        }
-
-        .about-image img {
-            height: 450px;
-            object-fit: cover;
-        }
-
-        .about-text h2 {
-            color: var(--primary);
-            font-size: 2.3rem;
-            margin-bottom: 20px;
-        }
-
-        .about-text p {
-            color: #555;
-            margin-bottom: 15px;
-        }
-
-        .check-list {
-            list-style: none;
-            margin: 20px 0;
-        }
-
-        .check-list li {
-            margin: 10px 0;
-        }
-
-        .check-list li::before {
-            content: "✓";
-            color: var(--secondary);
-            font-weight: bold;
-            margin-right: 10px;
-        }
-
-
-        /* =========================
-           ACADEMICS
-        ========================== */
-
-        .academics {
-            background: var(--light);
-        }
-
-        .cards {
-            display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            gap: 25px;
-        }
-
-        .card {
-            background: white;
-            padding: 35px 25px;
-            border-radius: 15px;
-            box-shadow: 0 5px 20px rgba(0,0,0,0.07);
-            transition: 0.3s;
-        }
-
-        .card:hover {
-            transform: translateY(-8px);
-            box-shadow: 0 15px 30px rgba(0,0,0,0.12);
-        }
-
-        .card-icon {
-            width: 65px;
-            height: 65px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            background: #e8f3ff;
-            border-radius: 50%;
-            font-size: 30px;
-            margin-bottom: 20px;
-        }
-
-        .card h3 {
-            color: var(--primary);
-            margin-bottom: 10px;
-        }
-
-        .card p {
-            color: #666;
-        }
-
-
-        /* =========================
-           WHY US
-        ========================== */
-
-        .why-grid {
-            display: grid;
-            grid-template-columns: repeat(2, 1fr);
-            gap: 25px;
-        }
-
-        .why-item {
-            display: flex;
-            gap: 20px;
-            padding: 25px;
-            background: white;
-            border-radius: 15px;
-            box-shadow: 0 5px 20px rgba(0,0,0,0.06);
-        }
-
-        .why-number {
-            min-width: 50px;
-            height: 50px;
-            border-radius: 50%;
-            background: var(--primary);
-            color: var(--gold);
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-weight: bold;
-        }
-
-        .why-item h3 {
-            color: var(--primary);
-            margin-bottom: 5px;
-        }
-
-        .why-item p {
-            color: #666;
-        }
-
-
-        /* =========================
-           STUDENT LIFE
-        ========================== */
-
-        .student-life {
-            background: var(--primary);
-            color: white;
-        }
-
-        .student-life .section-title h2 {
-            color: white;
-        }
-
-        .student-life .section-title p {
-            color: #d5e3ef;
-        }
-
-        .life-grid {
-            display: grid;
-            grid-template-columns: repeat(4, 1fr);
-            gap: 20px;
-        }
-
-        .life-card {
-            position: relative;
-            height: 270px;
-            overflow: hidden;
-            border-radius: 15px;
-        }
-
-        .life-card img {
-            height: 100%;
-            object-fit: cover;
-            transition: 0.5s;
-        }
-
-        .life-card:hover img {
-            transform: scale(1.1);
-        }
-
-        .life-caption {
-            position: absolute;
-            bottom: 0;
-            left: 0;
-            right: 0;
-            padding: 25px 15px 15px;
-            background: linear-gradient(transparent, rgba(0,0,0,0.85));
-        }
-
-        .life-caption h3 {
-            color: white;
-        }
-
-
-        /* =========================
-           ACHIEVEMENTS
-        ========================== */
-
-        .achievement-grid {
-            display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            gap: 25px;
-        }
-
-        .achievement {
-            text-align: center;
-            padding: 35px 20px;
-            border-radius: 15px;
-            background: linear-gradient(135deg, #063970, #0b8f55);
-            color: white;
-        }
-
-        .achievement .number {
-            color: var(--gold);
-            font-size: 3rem;
-            font-weight: bold;
-        }
-
-
-        /* =========================
-           GALLERY
-        ========================== */
-
-        .gallery {
-            background: var(--light);
-        }
-
-        .gallery-grid {
-            display: grid;
-            grid-template-columns: repeat(4, 1fr);
-            gap: 12px;
-        }
-
-        .gallery-item {
-            height: 230px;
-            overflow: hidden;
-            border-radius: 10px;
-            cursor: pointer;
-        }
-
-        .gallery-item img {
-            height: 100%;
-            object-fit: cover;
-            transition: 0.4s;
-        }
-
-        .gallery-item:hover img {
-            transform: scale(1.08);
-        }
-
-
-        /* =========================
-           ADMISSION CTA
-        ========================== */
-
-        .admission-cta {
-            background:
-                linear-gradient(rgba(6,57,112,0.9), rgba(6,57,112,0.9)),
-                url("https://images.unsplash.com/photo-1523050854058-8df90110c9f1?auto=format&fit=crop&w=1800&q=80")
-                center/cover;
-            color: white;
-            text-align: center;
-        }
-
-        .admission-cta h2 {
-            font-size: 2.7rem;
-            margin-bottom: 15px;
-        }
-
-        .admission-cta p {
-            max-width: 700px;
-            margin: 0 auto 25px;
-        }
-
-
-        /* =========================
-           ADMISSION FORM
-        ========================== */
-
-        .form-section {
-            background: white;
-        }
-
-        .form-container {
-            max-width: 800px;
-            margin: auto;
-            background: #f8fafc;
-            padding: 40px;
-            border-radius: 20px;
-            box-shadow: 0 8px 30px rgba(0,0,0,0.08);
-        }
-
-        .form-grid {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 20px;
-        }
-
-        .form-group {
-            margin-bottom: 18px;
-        }
-
-        .form-group.full {
-            grid-column: 1 / -1;
-        }
-
-        label {
-            display: block;
-            font-weight: bold;
-            margin-bottom: 7px;
-            color: #333;
-        }
-
-        input,
-        select,
-        textarea {
-            width: 100%;
-            padding: 13px;
-            border: 1px solid #ddd;
-            border-radius: 8px;
-            font-size: 15px;
-            outline: none;
-        }
-
-        input:focus,
-        select:focus,
-        textarea:focus {
-            border-color: var(--secondary);
-        }
-
-        textarea {
-            min-height: 120px;
-            resize: vertical;
-        }
-
-        .form-submit {
-            width: 100%;
-            font-size: 16px;
-        }
-
-
-        /* =========================
-           CONTACT
-        ========================== */
-
-        .contact {
-            background: var(--dark);
-            color: white;
-        }
-
-        .contact-grid {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 50px;
-        }
-
-        .contact h2 {
-            color: var(--gold);
-            margin-bottom: 20px;
-        }
-
-        .contact-info p {
-            margin: 15px 0;
-            color: #d8e1e8;
-        }
-
-        .map {
-            min-height: 300px;
-            background: #123452;
-            border-radius: 15px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            text-align: center;
-            color: #b9c9d7;
-        }
-
-
-        /* =========================
-           FOOTER
-        ========================== */
-
-        footer {
-            background: #031321;
-            color: #aebdca;
-            text-align: center;
-            padding: 25px 0;
-        }
-
-        footer strong {
-            color: white;
-        }
-
-
-        /* =========================
-           WHATSAPP BUTTON
-        ========================== */
-
-        .whatsapp {
-            position: fixed;
-            right: 22px;
-            bottom: 22px;
-            width: 58px;
-            height: 58px;
-            border-radius: 50%;
-            background: #25D366;
-            color: white;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 29px;
-            z-index: 999;
-            box-shadow: 0 6px 20px rgba(0,0,0,0.25);
-            transition: 0.3s;
-        }
-
-        .whatsapp:hover {
-            transform: scale(1.1);
-        }
-
-
-        /* =========================
-           RESPONSIVE
-        ========================== */
-
-        @media (max-width: 900px) {
-
-            .nav-links {
-                position: absolute;
-                top: 75px;
-                left: 0;
-                right: 0;
-                background: white;
-                display: none;
-                flex-direction: column;
-                padding: 25px;
-                box-shadow: 0 10px 20px rgba(0,0,0,0.1);
-            }
-
-            .nav-links.active {
-                display: flex;
-            }
-
-            .menu-btn {
-                display: block;
-            }
-
-            .stats-grid {
-                grid-template-columns: repeat(2, 1fr);
-            }
-
-            .cards {
-                grid-template-columns: 1fr 1fr;
-            }
-
-            .life-grid {
-                grid-template-columns: 1fr 1fr;
-            }
-
-            .gallery-grid {
-                grid-template-columns: 1fr 1fr;
-            }
-        }
-
-
-        @media (max-width: 700px) {
-
-            .topbar-content {
-                flex-direction: column;
-                text-align: center;
-                gap: 4px;
-            }
-
-            .hero {
-                min-height: 600px;
-            }
-
-            .hero h1 {
-                font-size: 2.7rem;
-            }
-
-            .btn-outline {
-                margin-left: 0;
-                margin-top: 10px;
-            }
-
-            .about-grid,
-            .contact-grid,
-            .why-grid,
-            .cards,
-            .achievement-grid {
-                grid-template-columns: 1fr;
-            }
-
-            .life-grid,
-            .gallery-grid {
-                grid-template-columns: 1fr 1fr;
-            }
-
-            .form-grid {
-                grid-template-columns: 1fr;
-            }
-
-            .form-group.full {
-                grid-column: auto;
-            }
-
-            .section {
-                padding: 60px 0;
-            }
-
-            .section-title h2 {
-                font-size: 2rem;
-            }
-
-            .about-image img {
-                height: 330px;
-            }
-        }
-
-
-        @media (max-width: 450px) {
-
-            .life-grid,
-            .gallery-grid {
-                grid-template-columns: 1fr;
-            }
-
-            .stats-grid {
-                grid-template-columns: 1fr;
-            }
-
-            .stat {
-                border-right: none;
-                border-bottom: 1px solid #eee;
-            }
-
-        }
-    </style>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>DR SHEIN SECONDARY SCHOOL</title>
+
+<meta name="description" content="DR SHEIN SECONDARY SCHOOL - Ziwa Kije, Micheweni, North Pemba, Zanzibar.">
+
+<style>
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+scroll-behavior:smooth;
+}
+
+:root{
+--primary:#073b4c;
+--secondary:#0b7285;
+--accent:#f4b942;
+--light:#f4f8fa;
+--dark:#102a43;
+--text:#334e68;
+--white:#fff;
+--shadow:0 10px 30px rgba(0,0,0,.10);
+}
+
+body{
+font-family:Arial,Helvetica,sans-serif;
+color:var(--text);
+line-height:1.7;
+background:#fff;
+}
+
+a{
+text-decoration:none;
+color:inherit;
+}
+
+img{
+max-width:100%;
+display:block;
+}
+
+.container{
+width:92%;
+max-width:1200px;
+margin:auto;
+}
+
+section{
+padding:80px 0;
+}
+
+.section-title{
+text-align:center;
+margin-bottom:45px;
+}
+
+.section-title h2{
+font-size:36px;
+color:var(--primary);
+margin-bottom:10px;
+}
+
+.section-title p{
+max-width:700px;
+margin:auto;
+}
+
+/* TOP BAR */
+
+.topbar{
+background:var(--primary);
+color:#fff;
+padding:9px 0;
+font-size:13px;
+}
+
+.topbar-content{
+display:flex;
+justify-content:space-between;
+gap:15px;
+flex-wrap:wrap;
+}
+
+/* HEADER */
+
+header{
+position:sticky;
+top:0;
+z-index:1000;
+background:#fff;
+box-shadow:0 3px 15px rgba(0,0,0,.08);
+}
+
+.navbar{
+min-height:75px;
+display:flex;
+align-items:center;
+justify-content:space-between;
+}
+
+.brand{
+display:flex;
+align-items:center;
+gap:10px;
+}
+
+.logo{
+width:52px;
+height:52px;
+object-fit:contain;
+border-radius:50%;
+}
+
+.brand h1{
+font-size:18px;
+color:var(--primary);
+}
+
+.brand small{
+font-size:11px;
+color:var(--secondary);
+}
+
+.nav-links{
+display:flex;
+gap:20px;
+list-style:none;
+}
+
+.nav-links a{
+font-size:14px;
+font-weight:bold;
+color:var(--dark);
+}
+
+.nav-links a:hover{
+color:var(--secondary);
+}
+
+.menu-btn{
+display:none;
+border:0;
+background:var(--primary);
+color:#fff;
+font-size:24px;
+padding:7px 12px;
+border-radius:6px;
+}
+
+/* HERO */
+
+.hero{
+min-height:650px;
+display:flex;
+align-items:center;
+color:#fff;
+background:
+linear-gradient(rgba(3,30,40,.78),rgba(3,30,40,.78)),
+url("drshein3.jpg") center/cover no-repeat;
+}
+
+.hero-content{
+max-width:780px;
+}
+
+.hero-badge{
+display:inline-block;
+background:var(--accent);
+color:#222;
+padding:8px 17px;
+border-radius:30px;
+font-weight:bold;
+margin-bottom:20px;
+}
+
+.hero h2{
+font-size:52px;
+line-height:1.15;
+margin-bottom:20px;
+}
+
+.hero h2 span{
+color:var(--accent);
+}
+
+.hero p{
+font-size:18px;
+margin-bottom:25px;
+}
+
+.btn{
+display:inline-block;
+padding:13px 25px;
+border-radius:6px;
+font-weight:bold;
+margin:5px;
+transition:.3s;
+}
+
+.btn-primary{
+background:var(--accent);
+color:#222;
+}
+
+.btn-outline{
+border:2px solid #fff;
+color:#fff;
+}
+
+.btn-outline:hover{
+background:#fff;
+color:var(--primary);
+}
+
+/* QUICK INFO */
+
+.quick-info{
+margin-top:-45px;
+position:relative;
+z-index:10;
+}
+
+.quick-grid{
+display:grid;
+grid-template-columns:repeat(4,1fr);
+background:#fff;
+box-shadow:var(--shadow);
+border-radius:12px;
+overflow:hidden;
+}
+
+.quick-card{
+padding:25px;
+text-align:center;
+border-right:1px solid #ddd;
+}
+
+.quick-card h3{
+font-size:27px;
+color:var(--primary);
+}
+
+/* ABOUT */
+
+.about-grid{
+display:grid;
+grid-template-columns:1fr 1fr;
+gap:50px;
+align-items:center;
+}
+
+.about-image img{
+width:100%;
+height:420px;
+object-fit:cover;
+border-radius:15px;
+box-shadow:var(--shadow);
+}
+
+.about-content h2{
+font-size:38px;
+color:var(--primary);
+margin-bottom:15px;
+}
+
+.about-content p{
+margin-bottom:15px;
+}
+
+.check-list{
+list-style:none;
+margin-top:20px;
+}
+
+.check-list li{
+margin:8px 0;
+font-weight:bold;
+}
+
+.check-list li:before{
+content:"✓";
+color:var(--secondary);
+margin-right:10px;
+}
+
+/* CARDS */
+
+.light-section{
+background:var(--light);
+}
+
+.info-grid{
+display:grid;
+grid-template-columns:repeat(3,1fr);
+gap:25px;
+}
+
+.info-card{
+background:#fff;
+padding:30px;
+border-radius:12px;
+box-shadow:var(--shadow);
+border-top:4px solid var(--secondary);
+}
+
+.info-card h3{
+color:var(--primary);
+margin-bottom:10px;
+}
+
+/* ACADEMICS */
+
+.academic-grid{
+display:grid;
+grid-template-columns:repeat(3,1fr);
+gap:25px;
+}
+
+.academic-card{
+background:#fff;
+padding:30px;
+border-radius:12px;
+box-shadow:var(--shadow);
+transition:.3s;
+}
+
+.academic-card:hover{
+transform:translateY(-7px);
+}
+
+.academic-icon{
+width:55px;
+height:55px;
+border-radius:50%;
+display:flex;
+align-items:center;
+justify-content:center;
+background:#e5f6f8;
+font-size:25px;
+margin-bottom:15px;
+}
+
+.academic-card h3{
+color:var(--primary);
+margin-bottom:10px;
+}
+
+/* WHY */
+
+.why-grid{
+display:grid;
+grid-template-columns:1fr 1fr;
+gap:25px;
+}
+
+.why-card{
+display:flex;
+gap:18px;
+background:#fff;
+padding:25px;
+border-radius:12px;
+box-shadow:var(--shadow);
+}
+
+.why-number{
+min-width:45px;
+height:45px;
+border-radius:50%;
+background:var(--primary);
+color:#fff;
+display:flex;
+align-items:center;
+justify-content:center;
+font-weight:bold;
+}
+
+/* STUDENT LIFE */
+
+.life-grid{
+display:grid;
+grid-template-columns:repeat(3,1fr);
+gap:25px;
+}
+
+.life-card{
+height:300px;
+position:relative;
+overflow:hidden;
+border-radius:12px;
+box-shadow:var(--shadow);
+}
+
+.life-card img{
+width:100%;
+height:100%;
+object-fit:cover;
+transition:.5s;
+}
+
+.life-card:hover img{
+transform:scale(1.08);
+}
+
+.life-overlay{
+position:absolute;
+left:0;
+right:0;
+bottom:0;
+padding:25px;
+color:#fff;
+background:linear-gradient(transparent,rgba(0,0,0,.9));
+}
+
+.life-overlay h3{
+font-size:21px;
+}
+
+/* ACHIEVEMENTS */
+
+.achievement-grid{
+display:grid;
+grid-template-columns:repeat(4,1fr);
+gap:20px;
+}
+
+.achievement{
+text-align:center;
+background:var(--primary);
+color:#fff;
+padding:35px 20px;
+border-radius:12px;
+}
+
+.achievement h3{
+font-size:38px;
+color:var(--accent);
+}
+
+/* NEWS */
+
+.news-grid{
+display:grid;
+grid-template-columns:repeat(3,1fr);
+gap:25px;
+}
+
+.news-card{
+background:#fff;
+border-radius:12px;
+overflow:hidden;
+box-shadow:var(--shadow);
+}
+
+.news-card img{
+width:100%;
+height:220px;
+object-fit:cover;
+}
+
+.news-content{
+padding:25px;
+}
+
+.news-content h3{
+color:var(--primary);
+margin-bottom:10px;
+}
+
+/* GALLERY */
+
+.gallery{
+display:grid;
+grid-template-columns:repeat(4,1fr);
+gap:15px;
+}
+
+.gallery-item{
+height:230px;
+border-radius:10px;
+overflow:hidden;
+background:#edf2f7;
+cursor:pointer;
+}
+
+.gallery-item img{
+width:100%;
+height:100%;
+object-fit:cover;
+transition:.4s;
+}
+
+.gallery-item:hover img{
+transform:scale(1.08);
+}
+
+/* ADMISSION */
+
+.admission{
+background:
+linear-gradient(rgba(7,59,76,.9),rgba(7,59,76,.9)),
+url("IMG-SCHOOL.JPG") center/cover;
+color:#fff;
+text-align:center;
+}
+
+.admission h2{
+font-size:40px;
+margin-bottom:15px;
+}
+
+/* CONTACT */
+
+.contact-grid{
+display:grid;
+grid-template-columns:1fr 1fr;
+gap:40px;
+}
+
+.contact-box{
+background:var(--light);
+padding:30px;
+border-radius:12px;
+}
+
+.contact-item{
+margin-bottom:22px;
+}
+
+.contact-item h3{
+color:var(--primary);
+}
+
+.map-box{
+min-height:350px;
+background:#dceef2;
+border-radius:12px;
+display:flex;
+align-items:center;
+justify-content:center;
+text-align:center;
+padding:30px;
+}
+
+.map-box a{
+display:inline-block;
+margin-top:15px;
+background:var(--primary);
+color:#fff;
+padding:12px 20px;
+border-radius:6px;
+}
+
+/* FOOTER */
+
+footer{
+background:#061f29;
+color:#d8e5ea;
+padding:50px 0 20px;
+}
+
+.footer-grid{
+display:grid;
+grid-template-columns:2fr 1fr 1fr 1.5fr;
+gap:30px;
+margin-bottom:35px;
+}
+
+footer h3{
+color:#fff;
+margin-bottom:15px;
+}
+
+.footer-links{
+list-style:none;
+}
+
+.footer-links li{
+margin:7px 0;
+}
+
+.footer-links a:hover{
+color:var(--accent);
+}
+
+.copyright{
+text-align:center;
+border-top:1px solid rgba(255,255,255,.15);
+padding-top:20px;
+}
+
+/* WHATSAPP */
+
+.whatsapp{
+position:fixed;
+right:20px;
+bottom:20px;
+width:58px;
+height:58px;
+border-radius:50%;
+background:#25d366;
+color:#fff;
+display:flex;
+align-items:center;
+justify-content:center;
+font-size:26px;
+z-index:1000;
+}
+
+/* BACK TOP */
+
+#backTop{
+position:fixed;
+right:20px;
+bottom:90px;
+width:42px;
+height:42px;
+border:0;
+border-radius:50%;
+background:var(--primary);
+color:#fff;
+display:none;
+z-index:999;
+cursor:pointer;
+}
+
+/* VIEWER */
+
+.viewer{
+position:fixed;
+inset:0;
+background:rgba(0,0,0,.93);
+display:none;
+align-items:center;
+justify-content:center;
+z-index:3000;
+}
+
+.viewer img{
+max-width:92%;
+max-height:88vh;
+object-fit:contain;
+}
+
+.close-viewer{
+position:absolute;
+right:30px;
+top:15px;
+color:#fff;
+font-size:42px;
+cursor:pointer;
+}
+
+/* RESPONSIVE */
+
+@media(max-width:1000px){
+
+.nav-links{
+gap:10px;
+}
+
+.hero h2{
+font-size:43px;
+}
+
+.quick-grid,
+.achievement-grid{
+grid-template-columns:repeat(2,1fr);
+}
+
+.academic-grid,
+.life-grid,
+.news-grid{
+grid-template-columns:repeat(2,1fr);
+}
+
+.gallery{
+grid-template-columns:repeat(3,1fr);
+}
+
+.footer-grid{
+grid-template-columns:repeat(2,1fr);
+}
+
+}
+
+@media(max-width:760px){
+
+.menu-btn{
+display:block;
+}
+
+.nav-links{
+position:absolute;
+left:0;
+right:0;
+top:75px;
+background:#fff;
+display:none;
+flex-direction:column;
+padding:20px 5%;
+box-shadow:0 10px 20px rgba(0,0,0,.1);
+}
+
+.nav-links.active{
+display:flex;
+}
+
+.nav-links li{
+width:100%;
+padding:7px 0;
+}
+
+.about-grid,
+.why-grid,
+.contact-grid{
+grid-template-columns:1fr;
+}
+
+.info-grid,
+.academic-grid,
+.life-grid,
+.news-grid{
+grid-template-columns:1fr;
+}
+
+.gallery{
+grid-template-columns:repeat(2,1fr);
+}
+
+.hero h2{
+font-size:38px;
+}
+
+.quick-grid{
+grid-template-columns:1fr 1fr;
+}
+
+.footer-grid{
+grid-template-columns:1fr;
+}
+
+}
+
+@media(max-width:480px){
+
+section{
+padding:60px 0;
+}
+
+.section-title h2{
+font-size:29px;
+}
+
+.hero h2{
+font-size:32px;
+}
+
+.gallery{
+grid-template-columns:1fr;
+}
+
+.gallery-item{
+height:260px;
+}
+
+.achievement-grid,
+.quick-grid{
+grid-template-columns:1fr;
+}
+
+.brand h1{
+font-size:14px;
+}
+
+.logo{
+width:45px;
+height:45px;
+}
+
+}
+
+</style>
 </head>
 
 <body>
 
-    <!-- ================= TOP BAR ================= -->
+<!-- TOP BAR -->
 
-    <div class="topbar">
-        <div class="container topbar-content">
-            <span>📚 Inspiring Minds • Building Futures</span>
-            <span>📞 Call us for admission information</span>
-        </div>
-    </div>
+<div class="topbar">
 
+<div class="container topbar-content">
 
-    <!-- ================= NAVIGATION ================= -->
+<div>
+<span>📍 Ziwa Kije, Micheweni, North Pemba</span>
+<span>📞 +255 773 889 572</span>
+</div>
 
-    <header>
-        <nav class="container">
+<div>
+<span>🕐 Monday - Friday: 8:00 AM - 4:00 PM</span>
+</div>
 
-            <a href="#home" class="logo">
-                <div class=""><img src ="dr shein.png" height="45" width="50"></img></div>
+</div>
 
-                <div>
-                    DR SHEIN<br>
-                    <small>SECONDARY SCHOOL</small>
-                </div>
-            </a>
+</div>
 
-            <div class="menu-btn" onclick="toggleMenu()">☰</div>
 
-            <ul class="nav-links" id="navLinks">
-                <li><a href="#home">Home</a></li>
-                <li><a href="#about">About</a></li>
-                <li><a href="#academics">Academics</a></li>
-                <li><a href="#life">Student Life</a></li>
-                <li><a href="#gallery">Gallery</a></li>
-               
-                <li><a href="#contact">Contact</a></li>
-            </ul>
+<!-- HEADER -->
 
-        </nav>
-    </header>
+<header>
 
+<div class="container navbar">
 
-    <!-- ================= HERO ================= -->
+<a href="#home" class="brand">
 
-    <section class="hero" id="home">
+<img
+src="dr shein.png"
+class="logo"
+alt="DR SHEIN Logo">
 
-        <div class="container hero-content">
+<div>
+<h1>DR SHEIN SECONDARY SCHOOL</h1>
+<small>Ziwa Kije • Micheweni • Pemba</small>
+</div>
 
-           <center> <font size ="20"><font color ="manganes"> WELCOME TO DR SHEIN SECONDARY SCHOOL</font></font></center>
-			
+</a>
 
-            <h2>
-                Discover Your
-                <span>Potential.</span>
-                Shape Your Future.
-            </h2>
 
-            <p>
-                A place where knowledge meets character, dreams become goals,
-                and every student is encouraged to become the best version of themselves.
-            </p>
+<button class="menu-btn" onclick="toggleMenu()">☰</button>
 
-          
 
-            <a href="#about" class="btn btn-outline">
-                Discover Our School
-            </a>
+<ul class="nav-links" id="navLinks">
 
-        </div>
+<li><a href="#home">Home</a></li>
+<li><a href="#about">About</a></li>
+<li><a href="#academics">Academics</a></li>
+<li><a href="#students">Students</a></li>
+<li><a href="#achievements">Achievements</a></li>
+<li><a href="#gallery">Gallery</a></li>
+<li><a href="#admission">Admissions</a></li>
+<li><a href="#contact">Contact</a></li>
 
-    </section>
+</ul>
 
+</div>
 
-    <!-- ================= STATS ================= -->
+</header>
 
-    <section class="stats">
 
-        <div class="container stats-grid">
+<!-- HERO -->
 
-            <div class="stat">
-                <h3>621+</h3>
-                <p>Students</p>
-            </div>
+<section class="hero" id="home">
 
-            <div class="stat">
-                <h3>22+</h3>
-                <p>Teachers & Staff</p>
-            </div>
+<div class="container hero-content">
 
-            <div class="stat">
-                <h3>6+</h3>
-                <p>Years of Excellence</p>
-            </div>
+<span class="hero-badge">
+WELCOME TO DR SHEIN SECONDARY SCHOOL
+</span>
 
-            <div class="stat">
-                <h3>95%</h3>
-                <p>Student Success</p>
-            </div>
+<h2>
+Building Knowledge,
+<span>Character & Talent</span>
+for a Better Future
+</h2>
 
-        </div>
+<p>
+DR SHEIN SECONDARY SCHOOL is committed to providing
+quality education, discipline, creativity and opportunities
+for students to discover and develop their abilities.
+</p>
 
-    </section>
+<a href="#about" class="btn btn-primary">
+Discover Our School
+</a>
 
+<a href="#contact" class="btn btn-outline">
+Contact School
+</a>
 
-    <!-- ================= ABOUT ================= -->
+</div>
 
-    <section class="section" id="about">
-
-        <div class="container about-grid">
-
-            <div class="about-image">
-                <img
-                    src="IMG-SCHOOL.JPG"
-                    >
-            </div>
-
-            <div class="about-text">
-
-                <h2>More Than a School — A Community.</h2>
-
-                <p>
-                    At <strong>DR SHEIN SECONDARY SCHOOL</strong>, we believe that
-                    education is not only about passing examinations.
-                    It is about developing confident, responsible and
-                    creative young people.
-                </p>
-
-                <p>
-                    Our school provides students with opportunities to
-                    explore their talents, develop leadership skills and
-                    prepare for a successful future.
-                </p>
+</section>
 
-                <ul class="check-list">
-                    <li>Qualified and dedicated teachers</li>
-                    <li>Supportive learning environment</li>
-                    <li>Academic and extracurricular development</li>
-                    <li>Strong focus on discipline and character</li>
-                    <li>Modern learning approaches</li>
-                </ul>
 
-               
+<!-- QUICK INFO -->
 
-            </div>
+<div class="quick-info">
 
-        </div>
+<div class="container">
 
-    </section>
+<div class="quick-grid">
 
+<div class="quick-card">
+<h3>621+</h3>
+<p>Students</p>
+</div>
 
-    <!-- ================= ACADEMICS ================= -->
+<div class="quick-card">
+<h3>22+</h3>
+<p>Teachers & Staff</p>
+</div>
 
-    <section class="section academics" id="academics">
+<div class="quick-card">
+<h3>6+</h3>
+<p>Years of Excellence</p>
+</div>
 
-        <div class="container">
+<div class="quick-card">
+<h3>95%</h3>
+<p>Student Success</p>
+</div>
 
-            <div class="section-title">
-                <h2>Academic Excellence</h2>
+</div>
 
-                <p>
-                    We help students build a strong foundation for
-                    higher education and their future careers.
-                </p>
-            </div>
+</div>
 
-            <div class="cards">
+</div>
 
-                <div class="card">
-                    <div class="card-icon">🔬</div>
-                    <h3>Science & Technology</h3>
-                    <p>
-                        Encourage curiosity, experimentation,
-                        scientific thinking and technological skills.
-                    </p>
-                </div>
-
-                <div class="card">
-                    <div class="card-icon">📖</div>
-                    <h3>Languages & Humanities</h3>
-                    <p>
-                        Develop communication, critical thinking,
-                        creativity and understanding of society.
-                    </p>
-                </div>
-
-                <div class="card">
-                    <div class="card-icon">📐</div>
-                    <h3>Mathematics</h3>
-                    <p>
-                        Build logical thinking, problem-solving
-                        abilities and strong numerical foundations.
-                    </p>
-                </div>
-
-                <div class="card">
-                    <div class="card-icon">💻</div>
-                    <h3>ICT & Digital Skills</h3>
-                    <p>
-                        Prepare students for a digital world through
-                        computer and technology education.
-                    </p>
-                </div>
 
-                <div class="card">
-                    <div class="card-icon">🎨</div>
-                    <h3>Creative Arts</h3>
-                    <p>
-                        Give students opportunities to express
-                        creativity through arts and culture.
-                    </p>
-                </div>
+<!-- ABOUT -->
 
-                <div class="card">
-                    <div class="card-icon">⚽</div>
-                    <h3>Sports & Fitness</h3>
-                    <p>
-                        Promote teamwork, discipline, confidence
-                        and healthy lifestyles.
-                    </p>
-                </div>
+<section id="about">
 
-            </div>
+<div class="container">
 
-        </div>
+<div class="section-title">
 
-    </section>
+<h2>About Our School</h2>
 
+<p>
+A learning community committed to academic growth,
+discipline, talents and responsible citizenship.
+</p>
 
-    <!-- ================= WHY CHOOSE US ================= -->
+</div>
 
-    <section class="section">
-
-        <div class="container">
-
-            <div class="section-title">
-                <h2>Why Choose DR SHEIN?</h2>
-
-                <p>
-                    We are committed to creating an environment
-                    where every learner can thrive.
-                </p>
-            </div>
-
-            <div class="why-grid">
-
-                <div class="why-item">
-                    <div class="why-number">01</div>
-
-                    <div>
-                        <h3>Quality Education</h3>
-                        <p>
-                            We focus on strong academic foundations
-                            and meaningful learning.
-                        </p>
-                    </div>
-                </div>
-
-                <div class="why-item">
-                    <div class="why-number">02</div>
-
-                    <div>
-                        <h3>Experienced Teachers</h3>
-                        <p>
-                            Our educators guide, support and motivate
-                            students throughout their education.
-                        </p>
-                    </div>
-                </div>
-
-                <div class="why-item">
-                    <div class="why-number">03</div>
-
-                    <div>
-                        <h3>Character Development</h3>
-                        <p>
-                            We develop responsibility, respect,
-                            leadership and discipline.
-                        </p>
-                    </div>
-                </div>
 
-                <div class="why-item">
-                    <div class="why-number">04</div>
+<div class="about-grid">
 
-                    <div>
-                        <h3>Student Support</h3>
-                        <p>
-                            Students receive guidance that helps
-                            them grow academically and personally.
-                        </p>
-                    </div>
-                </div>
+<div class="about-image">
 
-            </div>
+<img
+src="IMG-SCHOOL.JPG"
+alt="DR SHEIN Secondary School">
 
-        </div>
+</div>
 
-    </section>
 
-
-    <!-- ================= STUDENT LIFE ================= -->
+<div class="about-content">
 
-    <section class="section student-life" id="life">
+<h2>DR SHEIN SECONDARY SCHOOL</h2>
 
-        <div class="container">
+<p>
+DR SHEIN SECONDARY SCHOOL is located at Ziwa Kije,
+Micheweni District, North Pemba, Zanzibar, Tanzania.
+</p>
 
-            <div class="section-title">
-                <h2>Life Beyond the Classroom</h2>
+<p>
+The school provides an environment where students can
+develop academic knowledge, practical skills, discipline,
+creativity and confidence.
+</p>
 
-                <p>
-                    Learning becomes even more powerful when students
-                    participate, collaborate and discover their talents.
-                </p>
-            </div>
+<p>
+We believe education should prepare students not only
+for examinations, but also for responsible and productive
+life in society.
+</p>
 
-            <div class="life-grid">
+<ul class="check-list">
 
-                <div class="life-card">
-                    <img
-                        src="https://images.unsplash.com/photo-1526232761682-d26e03ac148e?auto=format&fit=crop&w=800&q=80"
-                        alt="Sports">
-                    <div class="life-caption">
-                        <h3>Sports</h3>
-                        <p>Teamwork & discipline</p>
-                    </div>
-                </div>
+<li>Quality teaching and learning</li>
+<li>Discipline and good character</li>
+<li>Talent and creativity development</li>
+<li>Student participation and leadership</li>
+<li>Positive relationship with parents and community</li>
 
-                <div class="life-card">
-                    <img
-                        src="https://images.unsplash.com/photo-1529390079861-591de354faf5?auto=format&fit=crop&w=800&q=80"
-                        alt="Students">
-                    <div class="life-caption">
-                        <h3>Student Clubs</h3>
-                        <p>Discover your interests</p>
-                    </div>
-                </div>
+</ul>
 
-                <div class="life-card">
-                    <img
-                        src="https://images.unsplash.com/photo-1492684223066-81342ee5ff30?auto=format&fit=crop&w=800&q=80"
-                        alt="Events">
-                    <div class="life-caption">
-                        <h3>School Events</h3>
-                        <p>Memories that last</p>
-                    </div>
-                </div>
+</div>
 
-                <div class="life-card">
-                    <img
-                        src="https://images.unsplash.com/photo-1511632765486-a01980e01a18?auto=format&fit=crop&w=800&q=80"
-                        alt="Teamwork">
-                    <div class="life-caption">
-                        <h3>Leadership</h3>
-                        <p>Building tomorrow's leaders</p>
-                    </div>
-                </div>
+</div>
 
-            </div>
+</div>
 
-        </div>
+</section>
 
-    </section>
 
+<!-- VISION MISSION VALUES -->
 
-    <!-- ================= ACHIEVEMENTS ================= -->
+<section class="light-section">
 
-    <section class="section">
+<div class="container">
 
-        <div class="container">
+<div class="section-title">
 
-            <div class="section-title">
+<h2>Our Direction</h2>
 
-                <h2>Our Achievements</h2>
+<p>
+The principles that guide teaching, learning and
+student development at DR SHEIN.
+</p>
 
-                <p>
-                    Celebrating the dedication of our students,
-                    teachers and entire school community.
-                </p>
+</div>
 
-            </div>
 
-            <div class="achievement-grid">
+<div class="info-grid">
 
-                <div class="achievement">
-                    <div class="number">95%</div>
-                    <h3>Academic Success</h3>
-                    <p>Committed to excellent learning outcomes.</p>
-                </div>
+<div class="info-card">
 
-                <div class="achievement">
-                    <div class="number">6+</div>
-                    <h3>Years of Service</h3>
-                    <p>Growing generations of learners.</p>
-                </div>
+<h3>🎯 Our Vision</h3>
 
-                <div class="achievement">
-                    <div class="number">621+</div>
-                    <h3>Students</h3>
-                    <p>Building a strong school community.</p>
-                </div>
+<p>
+To develop knowledgeable, disciplined, creative and
+responsible young people who can contribute positively
+to society.
+</p>
 
-            </div>
+</div>
 
-        </div>
 
-    </section>
+<div class="info-card">
 
+<h3>📚 Our Mission</h3>
 
-    <!-- ================= GALLERY ================= -->
+<p>
+To provide quality education and opportunities that
+enable students to develop knowledge, skills, talents,
+values and confidence.
+</p>
 
-    <section class="section gallery" id="gallery">
+</div>
 
-        <div class="container">
 
-            <div class="section-title">
-                <h2>School Gallery</h2>
+<div class="info-card">
 
-                <p>
-                    A glimpse of the experiences and activities
-                    that make school life special.
-                </p>
-            </div>
+<h3>⭐ Core Values</h3>
 
-            <div class="gallery-grid">
+<p>
+Discipline, integrity, respect, hard work, cooperation,
+creativity, responsibility and commitment to learning.
+</p>
 
-                <div class="gallery-item">
-                    <img src="students practice.jpg"
-                         alt="Students learning">
-                </div>
+</div>
 
-                <div class="gallery-item">
-                    <img src ="library.jpg"
-                         alt="Classroom">
-                </div>
+</div>
 
-                <div class="gallery-item">
-                    <img src=""
-                         alt="Students">
-                </div>
+</div>
 
-                <div class="gallery-item">
-                    <img src="https://images.unsplash.com/photo-1560785496-3c9d27877182?auto=format&fit=crop&w=800&q=80"
-                         alt="School activity">
-                </div>
+</section>
 
-                <div class="gallery-item">
-                    <img src="https://images.unsplash.com/photo-1588072432836-e10032774350?auto=format&fit=crop&w=800&q=80"
-                         alt="Teacher">
-                </div>
 
-                <div class="gallery-item">
-                    <img src="https://images.unsplash.com/photo-1509062522246-3755977927d7?auto=format&fit=crop&w=800&q=80"
-                         alt="School">
-                </div>
+<!-- ACADEMICS -->
 
-                <div class="gallery-item">
-                    <img src="https://images.unsplash.com/photo-1546410531-bb4caa6b424d?auto=format&fit=crop&w=800&q=80"
-                         alt="Classroom">
-                </div>
+<section id="academics">
 
-                <div class="gallery-item">
-                    <img src="https://images.unsplash.com/photo-1523050854058-8df90110c9f1?auto=format&fit=crop&w=800&q=80"
-                         alt="Graduation">
-                </div>
+<div class="container">
 
-            </div>
+<div class="section-title">
 
-        </div>
+<h2>Academic Life</h2>
 
-    </section>
+<p>
+Learning is at the heart of our school.
+Students are encouraged to understand, practise,
+communicate and apply what they learn.
+</p>
 
+</div>
 
-    <!-- ================= ADMISSION CTA ================= -->
 
-    <section class="section admission-cta">
+<div class="academic-grid">
 
-        <div class="container">
+<div class="academic-card">
 
-            <h2>Your Future Starts Here.</h2>
+<div class="academic-icon">📖</div>
 
-            <p>
-                Give your child an opportunity to learn, grow,
-                discover their talents and prepare for a brighter future.
-            </p>
+<h3>Classroom Learning</h3>
 
-           
+<p>
+Students participate in lessons, discussions,
+exercises and activities designed to develop
+understanding and practical competence.
+</p>
 
-        </div>
+</div>
 
-    </section>
 
+<div class="academic-card">
 
+<div class="academic-icon">🔬</div>
 
+<h3>Science & Practical Skills</h3>
 
+<p>
+Practical activities help learners connect
+classroom knowledge with real-life situations.
+</p>
 
-    <!-- ================= CONTACT ================= -->
+</div>
 
-    <section class="section contact" id="contact">
 
-        <div class="container contact-grid">
+<div class="academic-card">
 
-            <div class="contact-info">
+<div class="academic-icon">💻</div>
 
-                <h2>Contact DR SHEIN SEC. SCHOOL</h2>
+<h3>ICT & Digital Skills</h3>
 
-                <p>
-                    🏠 <strong>Location:</strong><br>
-                   Ziwa Kije, Micheweni Destrict, North Pemba., Zanzibar, Tanzania
-                </p>
+<p>
+Students are encouraged to develop computer,
+digital and information technology skills.
+</p>
 
-                <p>
-                    📞 <strong>Phone:</strong><br>
-                    +255 773889572
-                </p>
+</div>
 
-                <p>
-                    ✉️ <strong>Email:</strong><br>
-                    dr.sheinsecschool@gmail.com
-                </p>
 
-                <p>
-                    🕐 <strong>Office Hours:</strong><br>
-                    Monday – Friday: 8:00 AM – 4:00 PM
-                </p>
+<div class="academic-card">
 
-           
+<div class="academic-icon">🧮</div>
 
-            </div>
+<h3>Mathematics</h3>
 
+<p>
+Learners develop problem-solving, reasoning,
+communication and application skills.
+</p>
 
-            
+</div>
 
-               
 
-         
+<div class="academic-card">
 
-        
+<div class="academic-icon">🌍</div>
 
-    </section>
+<h3>Social & Life Skills</h3>
 
+<p>
+Education also develops communication,
+cooperation, responsibility and citizenship.
+</p>
 
-    <!-- ================= FOOTER ================= -->
+</div>
 
-    <footer>
 
-        <div class="container">
+<div class="academic-card">
 
-            <p>
-                © <span id="yearNow"></span>
-                <strong>DR SHEIN SEC. SCHOOL</strong>.
-                All Rights Reserved.
-            </p>
+<div class="academic-icon">🏆</div>
 
-            <p style="margin-top:8px;">
-                Excellence • Character • Leadership
-            </p>
+<h3>Academic Excellence</h3>
 
-        </div>
+<p>
+Students are encouraged to set goals, work hard
+and continuously improve their academic performance.
+</p>
 
-    </footer>
+</div>
 
+</div>
 
-    <!-- ================= WHATSAPP ================= -->
+</div>
 
-    <!--
-        IMPORTANT:
-        Replace 255XXXXXXXXX with your actual WhatsApp number.
-        Example:
-        https://wa.me/255712345678
-    -->
+</section>
 
-    <a
-        class="whatsapp"
-        href="https://wa.me/255XXXXXXXXX?text=Hello%20DR%20SHEIN%20SEC.%20SCHOOL,%20I%20would%20like%20to%20ask%20about%20admission."
-        target="_blank"
-        aria-label="Chat with us on WhatsApp">
-        ☎
-    </a>
 
+<!-- WHY US -->
 
-    <!-- ================= JAVASCRIPT ================= -->
+<section class="light-section">
 
-    <script>
+<div class="container">
 
-        // Mobile navigation
-        function toggleMenu() {
+<div class="section-title">
 
-            const nav = document.getElementById("navLinks");
+<h2>Why DR SHEIN?</h2>
 
-            nav.classList.toggle("active");
+<p>
+We aim to create a school environment where
+every learner has an opportunity to grow.
+</p>
 
-        }
+</div>
 
 
-        // Close mobile menu after clicking a link
-        document.querySelectorAll(".nav-links a").forEach(function(link) {
+<div class="why-grid">
 
-            link.addEventListener("click", function() {
+<div class="why-card">
 
-                document
-                    .getElementById("navLinks")
-                    .classList.remove("active");
+<div class="why-number">01</div>
 
-            });
+<div>
 
-        });
+<h3>Student-Centred Learning</h3>
 
+<p>
+Students are encouraged to participate,
+ask questions, practise and demonstrate
+what they have learned.
+</p>
 
-        // Admission form
-        document
-            .getElementById("admissionForm")
-            .addEventListener("submit", function(event) {
+</div>
 
-                event.preventDefault();
+</div>
 
-                const studentName =
-                    document.getElementById("studentName").value;
 
-                document.getElementById("formMessage").textContent =
-                    "Thank you, " + studentName +
-                    "! Your admission enquiry has been received.";
+<div class="why-card">
 
-                this.reset();
+<div class="why-number">02</div>
 
-            });
+<div>
 
+<h3>Discipline & Character</h3>
 
-        // Current year
-        document.getElementById("yearNow").textContent =
-            new Date().getFullYear();
+<p>
+We promote responsibility, respect,
+good behaviour and positive relationships.
+</p>
 
-    </script>
+</div>
+
+</div>
+
+
+<div class="why-card">
+
+<div class="why-number">03</div>
+
+<div>
+
+<h3>Talent Development</h3>
+
+<p>
+Students are encouraged to discover
+and develop their talents through
+different activities.
+</p>
+
+</div>
+
+</div>
+
+
+<div class="why-card">
+
+<div class="why-number">04</div>
+
+<div>
+
+<h3>Community & Parents</h3>
+
+<p>
+Cooperation between the school,
+parents and community supports
+student development.
+</p>
+
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- STUDENT LIFE -->
+
+<section id="students">
+
+<div class="container">
+
+<div class="section-title">
+
+<h2>Student Life</h2>
+
+<p>
+School life goes beyond the classroom.
+Students have opportunities to learn,
+practise, cooperate and develop talents.
+</p>
+
+</div>
+
+
+<div class="life-grid">
+
+
+<div class="life-card">
+
+<img
+src="students practice.jpg"
+alt="Students learning">
+
+<div class="life-overlay">
+
+<h3>Learning & Practice</h3>
+
+<p>
+Students putting knowledge into practice.
+</p>
+
+</div>
+
+</div>
+
+
+<div class="life-card">
+
+<img
+src="talent.jpg"
+alt="Student talents">
+
+<div class="life-overlay">
+
+<h3>Talent Development</h3>
+
+<p>
+Supporting creativity and student abilities.
+</p>
+
+</div>
+
+</div>
+
+
+<div class="life-card">
+
+<img
+src="library.jpg"
+alt="School library">
+
+<div class="life-overlay">
+
+<h3>Reading & Research</h3>
+
+<p>
+Developing reading and independent learning.
+</p>
+
+</div>
+
+</div>
+
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- ACHIEVEMENTS -->
+
+<section id="achievements" class="light-section">
+
+<div class="container">
+
+<div class="section-title">
+
+<h2>Our Achievements</h2>
+
+<p>
+We celebrate progress, participation,
+hard work and student development.
+</p>
+
+</div>
+
+
+<div class="achievement-grid">
+
+<div class="achievement">
+<h3>621+</h3>
+<p>Students</p>
+</div>
+
+<div class="achievement">
+<h3>22+</h3>
+<p>Teachers & Staff</p>
+</div>
+
+<div class="achievement">
+<h3>6+</h3>
+<p>Years of Service</p>
+</div>
+
+<div class="achievement">
+<h3>95%</h3>
+<p>Student Success</p>
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- NEWS -->
+
+<section>
+
+<div class="container">
+
+<div class="section-title">
+
+<h2>School Life & Events</h2>
+
+<p>
+Important activities and moments from
+our school community.
+</p>
+
+</div>
+
+
+<div class="news-grid">
+
+
+<div class="news-card">
+
+<img
+src="library 2.jpg"
+alt="School library">
+
+<div class="news-content">
+
+<h3>Learning Environment</h3>
+
+<p>
+A supportive learning environment helps
+students build knowledge and confidence.
+</p>
+
+</div>
+
+</div>
+
+
+<div class="news-card">
+
+<img
+src="IMG_20211104_074956.jpg"
+alt="School activity">
+
+<div class="news-content">
+
+<h3>School Activities</h3>
+
+<p>
+Students participate in activities that
+encourage cooperation and responsibility.
+</p>
+
+</div>
+
+</div>
+
+
+<div class="news-card">
+
+<img
+src="IMG_20211104_093406.jpg"
+alt="School activity">
+
+<div class="news-content">
+
+<h3>Student Development</h3>
+
+<p>
+Academic and co-curricular activities
+contribute to overall student development.
+</p>
+
+</div>
+
+</div>
+
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- GALLERY -->
+
+<section id="gallery" class="light-section">
+
+<div class="container">
+
+<div class="section-title">
+
+<h2>School Gallery</h2>
+
+<p>
+Explore moments, activities and memories
+from DR SHEIN SECONDARY SCHOOL.
+</p>
+
+</div>
+
+
+<div class="gallery" id="schoolGallery"></div>
+
+</div>
+
+</section>
+
+
+<!-- ADMISSION -->
+
+<section class="admission" id="admission">
+
+<div class="container">
+
+<h2>Join DR SHEIN SECONDARY SCHOOL</h2>
+
+<p>
+For admission information, school requirements,
+enquiries and other information, contact the
+school office directly.
+</p>
+
+<a
+href="https://wa.me/255773889572?text=Hello%20DR%20SHEIN%20Secondary%20School%2C%20I%20would%20like%20to%20ask%20about%20admission."
+target="_blank"
+class="btn btn-primary">
+
+Ask About Admission
+
+</a>
+
+<a href="#contact" class="btn btn-outline">
+School Contact
+</a>
+
+</div>
+
+</section>
+
+
+<!-- PARENTS -->
+
+<section>
+
+<div class="container">
+
+<div class="section-title">
+
+<h2>For Parents & Guardians</h2>
+
+<p>
+Cooperation between parents, guardians and
+teachers is important for student success.
+</p>
+
+</div>
+
+
+<div class="info-grid">
+
+<div class="info-card">
+
+<h3>📞 Communication</h3>
+
+<p>
+Parents and guardians are encouraged to
+communicate with the school concerning
+student progress and development.
+</p>
+
+</div>
+
+
+<div class="info-card">
+
+<h3>📚 Academic Support</h3>
+
+<p>
+Supporting regular study, attendance,
+discipline and completion of school
+activities can strengthen learning.
+</p>
+
+</div>
+
+
+<div class="info-card">
+
+<h3>🤝 Partnership</h3>
+
+<p>
+School and family cooperation creates
+a positive environment for students
+to grow and succeed.
+</p>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- CONTACT -->
+
+<section id="contact" class="light-section">
+
+<div class="container">
+
+<div class="section-title">
+
+<h2>Contact Us</h2>
+
+<p>
+Get in touch with DR SHEIN SECONDARY SCHOOL.
+</p>
+
+</div>
+
+
+<div class="contact-grid">
+
+
+<div class="contact-box">
+
+<div class="contact-item">
+
+<h3>📍 School Location</h3>
+
+<p>
+Ziwa Kije, Micheweni District,
+North Pemba, Zanzibar, Tanzania
+</p>
+
+</div>
+
+
+<div class="contact-item">
+
+<h3>📞 Phone</h3>
+
+<p>
+<a href="tel:+255773889572">
++255 773 889 572
+</a>
+</p>
+
+</div>
+
+
+<div class="contact-item">
+
+<h3>✉️ Email</h3>
+
+<p>
+<a href="mailto:dr.sheinsecschool@gmail.com">
+dr.sheinsecschool@gmail.com
+</a>
+</p>
+
+</div>
+
+
+<div class="contact-item">
+
+<h3>🕐 Office Hours</h3>
+
+<p>
+Monday - Friday<br>
+8:00 AM - 4:00 PM
+</p>
+
+</div>
+
+
+<a
+href="https://wa.me/255773889572"
+target="_blank"
+class="btn btn-primary">
+
+Chat on WhatsApp
+
+</a>
+
+</div>
+
+
+<div class="map-box">
+
+<div>
+
+<h2>Find Our School</h2>
+
+<p>
+Ziwa Kije, Micheweni District,
+North Pemba, Zanzibar.
+</p>
+
+<a
+href="https://www.google.com/maps/search/?api=1&query=Ziwa+Kije+Micheweni+Pemba+Zanzibar"
+target="_blank">
+
+Open Location in Google Maps
+
+</a>
+
+</div>
+
+</div>
+
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- FOOTER -->
+
+<footer>
+
+<div class="container">
+
+<div class="footer-grid">
+
+
+<div>
+
+<h3>DR SHEIN SECONDARY SCHOOL</h3>
+
+<p>
+Building knowledge, character and talent
+for a better future.
+</p>
+
+<p style="margin-top:15px;">
+Ziwa Kije, Micheweni District,
+North Pemba, Zanzibar.
+</p>
+
+</div>
+
+
+<div>
+
+<h3>Quick Links</h3>
+
+<ul class="footer-links">
+
+<li><a href="#home">Home</a></li>
+<li><a href="#about">About</a></li>
+<li><a href="#academics">Academics</a></li>
+<li><a href="#students">Students</a></li>
+
+</ul>
+
+</div>
+
+
+<div>
+
+<h3>School</h3>
+
+<ul class="footer-links">
+
+<li><a href="#achievements">Achievements</a></li>
+<li><a href="#gallery">Gallery</a></li>
+<li><a href="#admission">Admissions</a></li>
+<li><a href="#contact">Contact</a></li>
+
+</ul>
+
+</div>
+
+
+<div>
+
+<h3>Contact</h3>
+
+<p>📞 +255 773 889 572</p>
+
+<p style="margin-top:8px;">
+✉️ dr.sheinsecschool@gmail.com
+</p>
+
+</div>
+
+
+</div>
+
+
+<div class="copyright">
+
+<p>
+© <span id="year"></span> DR SHEIN SECONDARY SCHOOL.
+All Rights Reserved.
+</p>
+
+</div>
+
+</div>
+
+</footer>
+
+
+<!-- WHATSAPP -->
+
+<a
+href="https://wa.me/255773889572"
+target="_blank"
+class="whatsapp"
+title="Chat with DR SHEIN">
+
+☎
+
+</a>
+
+
+<!-- BACK TO TOP -->
+
+<button id="backTop" onclick="goTop()">↑</button>
+
+
+<!-- IMAGE VIEWER -->
+
+<div class="viewer" id="viewer">
+
+<span class="close-viewer" onclick="closeViewer()">
+&times;
+</span>
+
+<img id="viewerImage" src="" alt="School image">
+
+</div>
+
+
+<script>
+
+/* MOBILE MENU */
+
+function toggleMenu(){
+
+document.getElementById("navLinks")
+.classList.toggle("active");
+
+}
+
+
+/* CLOSE MENU */
+
+document.querySelectorAll(".nav-links a").forEach(function(link){
+
+link.addEventListener("click",function(){
+
+document.getElementById("navLinks")
+.classList.remove("active");
+
+});
+
+});
+
+
+/* YEAR */
+
+document.getElementById("year").textContent =
+new Date().getFullYear();
+
+
+/* BACK TO TOP */
+
+window.addEventListener("scroll",function(){
+
+const button=document.getElementById("backTop");
+
+if(window.scrollY>500){
+
+button.style.display="block";
+
+}else{
+
+button.style.display="none";
+
+}
+
+});
+
+
+function goTop(){
+
+window.scrollTo({
+top:0,
+behavior:"smooth"
+});
+
+}
+
+
+/* GALLERY */
+
+const galleryImages=[
+
+"20240920 223319",
+"20260909 120337",
+"20260909 120346",
+"20260909_120443",
+"20260912_093940",
+"20260912_120448",
+
+"20260914_084630",
+"20260914_084634",
+"20260914_084644",
+"20260914_084651",
+"20260914_084803",
+"20260914_084805",
+"20260914_084807",
+
+"20260914_085239",
+"20260914_085254",
+"20260914_085256",
+
+"20260914_091530",
+"20260914_091718",
+"20260914_092614",
+"20260914_092635",
+"20260914 092639",
+"20260914_092707",
+"20260914_092755",
+"20260914 092759",
+"20260914_092837",
+"20260914 092844",
+"20260914_092845",
+
+"Dr shein",
+"dr shein",
+"dr",
+
+"drshein1",
+"drshein2",
+
+"IMG_20211104_074956",
+"IMG_20211104_093406",
+"IMG_20230803_100044_177",
+
+"IMG-SCHOOL",
+"library 2",
+"library",
+"students practice",
+"talent"
+
+];
+
+
+const gallery=document.getElementById("schoolGallery");
+
+
+/* TRY DIFFERENT EXTENSIONS */
+
+function loadImage(baseName,img,item){
+
+const extensions=[
+".jpg",
+".jpeg",
+".png",
+".webp",
+".JPG",
+".JPEG",
+".PNG"
+];
+
+let i=0;
+
+
+function tryImage(){
+
+if(i>=extensions.length){
+
+item.style.display="none";
+
+return;
+
+}
+
+
+const src=baseName+extensions[i];
+
+const test=new Image();
+
+
+test.onload=function(){
+
+img.src=src;
+
+};
+
+
+test.onerror=function(){
+
+i++;
+
+tryImage();
+
+};
+
+
+test.src=src;
+
+}
+
+tryImage();
+
+}
+
+
+/* CREATE GALLERY */
+
+galleryImages.forEach(function(name,index){
+
+const item=document.createElement("div");
+
+item.className="gallery-item";
+
+
+const img=document.createElement("img");
+
+img.alt=
+"DR SHEIN Secondary School Photo "+
+(index+1);
+
+
+item.appendChild(img);
+
+gallery.appendChild(item);
+
+
+loadImage(name,img,item);
+
+
+item.addEventListener("click",function(){
+
+if(img.src && img.naturalWidth>0){
+
+openViewer(img.src);
+
+}
+
+});
+
+});
+
+
+/* VIEWER */
+
+function openViewer(src){
+
+document.getElementById("viewerImage").src=src;
+
+document.getElementById("viewer")
+.style.display="flex";
+
+}
+
+
+function closeViewer(){
+
+document.getElementById("viewer")
+.style.display="none";
+
+}
+
+
+/* CLOSE VIEWER WHEN CLICKING BACKGROUND */
+
+document.getElementById("viewer")
+.addEventListener("click",function(e){
+
+if(e.target===this){
+
+closeViewer();
+
+}
+
+});
+
+</script>
 
 </body>
 </html>
-```
